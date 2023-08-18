@@ -1,0 +1,16 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Confirmed Vendors">
+        <div class="slds-var-m-around_medium">   
+            <lightning-button variant="destructive" label="Delete Selected Records" onclick={handleMassDelete} disabled={btnDisabled}></lightning-button>
+            <lightning-datatable
+                key-field="Id"
+                data={confirmedVendors.data}
+                columns={columns}
+                selected-rows={selectedRows}
+                onrowselection={handleRowSelection}
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
+
